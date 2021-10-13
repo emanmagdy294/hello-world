@@ -1,0 +1,436 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    text-decoration:none ;
+    list-style: none;
+    box-sizing: border-box;
+}
+body
+{
+    font-family: "Playfair Display", serif;
+}
+
+// variables
+$mainColor:linear-gradient(to right , #00d0ff, #25ffbf);
+$secondColor:#00d0ff;
+
+//******************************** nav bar *************************************/
+nav{
+    background-color: transparent;
+    height: 80px;
+    width: 100%;
+}
+.logo
+{
+    color: white;
+    font-size: 35px;
+    padding-left: 20px;
+    padding-top: 10px;
+    font-weight: bold;
+}
+nav ul
+{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li
+{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 16px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+a:hover{
+    background-color: rgb(195, 194, 194);
+    transition: .5s;
+    text-decoration: none;
+    color: black;
+}
+.checkBtn
+{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;    
+}
+.iconSearch
+{
+    color: white;
+    font-size: 17px;
+    margin-left: 50px;
+    margin-right: 20px;
+}
+#check
+{
+    display: none;
+}
+
+@media (max-width:952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media (max-width:952px){
+.checkBtn
+{
+    display: block;
+}
+
+ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    top: 80px;
+    left: -100%;
+    transition: all .5s;
+    text-align: center;
+    z-index: 99999;
+}
+nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+}
+nav ul li a{
+    font-size: 20px;
+}
+#check:checked ~ ul{
+    left: 0;
+}
+}
+
+//*************** END NAV ************************************/
+
+// start section 1 *********
+
+.backgroundHello
+{
+    background-image: url(images/cover.jpg.webp) ;
+    background-size: cover;
+}
+
+.caption
+{
+   color: $secondColor;
+   padding-top: 90px;
+   font-size: 180px;
+   font-family: 'Italianno', cursive;
+   font-weight: bold;
+}
+
+
+ .date
+ {
+    direction: rtl;
+    float: right;
+    padding-right: 200px;
+ }
+ .allbtn
+ {
+     border: none;
+     font-weight: bold;
+     color: black;
+ }
+ .btnsee
+ {
+     background: $mainColor;
+     @extend .allbtn ;
+ }
+ .btnBuy
+ {
+     background-color: white;
+     @extend .allbtn ;
+ }
+ .btnBuy:hover
+ {
+     background:$mainColor;
+     transition: .5s;
+ }
+
+//  ************* SECTION 2 **************************/
+.bgSection
+{
+    background-image: url(images/middle-cover.jpg.webp);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.descriptionCommon
+{
+    background: white;
+    box-shadow: -5px 2px 54px -9px rgba(75, 75, 75, 0.2);
+    margin-top: 100px;
+    width: 90%;
+}
+.personsDescription
+{
+    margin-left: -80px;
+}
+.personsDescription2 
+{
+  margin-left: 150px;
+  position: absolute;
+  z-index: 99;
+}
+.plus{
+    font-weight: bolder;
+    font-size: 20px;
+    color: white;
+    background: $mainColor;
+    padding: 10px;
+    width: 50px;
+}
+.childPlus
+{
+    cursor: pointer;
+    float: right;
+    direction: rtl;
+    margin-top: -70px;
+    padding-right: 0;
+}
+// ************collection images
+.plusDirection
+{  
+    position: absolute;
+    direction: rtl;
+    margin-top:-270px;
+    margin-left: 210px;
+    z-index: 99;
+    float: right;
+    cursor: pointer;
+}
+
+
+.owl-theme .owl-dots .owl-dot span {
+    width: 70px !important;
+    height: 70px !important;
+    margin: auto !important;
+    background-image: url(images/download.webp) !important;
+    background-size: cover !important;
+    display: block;
+    margin-top: -55px !important;
+    z-index: 99 !important;
+    position: absolute !important;
+    transition:.5s !important;
+    border: none !important;
+}
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
+    background: 0 0;
+    border: none;
+    display: none !important;
+    padding: 0!important;
+    font: inherit;
+}
+.owl-theme .owl-dots .owl-dot.active span{
+   display: none !important;
+}
+// hover pic
+
+.member
+{
+    transition: 1s;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+.member:hover img
+{
+    transform: scale(1.1 , 1.1);
+    transition-duration: .5s;
+    cursor: pointer;
+}
+
+.captions
+{
+
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    transition: top 1s;
+
+}
+
+.member:hover .captions
+{
+    top: 0px;
+    transition-duration: 1s;
+    background-color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+    transition: 1s
+}
+.member-icon
+{
+    transition: 1s
+}
+
+.card
+{
+    box-shadow: -5px 2px 54px -9px rgba(75, 75, 75, 0.2) !important;
+     border: none !important;
+}
+
+
+// FOOOTER************
+.bgFooter
+{
+    background-image: url(images/xfooter-cover.jpg.pagespeed.ic.bUq1sfau2M.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+.bgLayout
+{
+    background-color: rgba(3, 3, 3,.7);
+    background-size: cover;
+    background-position: center;
+
+}
+.title h2 {
+    font-size: 200px;
+    font-weight: 900;
+    color: rgba(190, 185, 185,.2);
+}
+
+.title h3 {
+    font-weight: bolder;
+    font-size: 100px;
+    color: hsl(0,0%,100%);
+    line-height: 1;
+    text-decoration: none;
+    ;
+}
+/*************************** MEDIA QUERY*************************************/
+ @media screen and (max-width:575px)
+ {
+    .caption{
+        font-size: 90px;
+    }
+    .descriptionCommon
+    {
+         margin-left: auto;
+         margin-right: auto;
+         margin-top: 0px;
+         width: 100%;
+    }
+    .personsDescription2 
+      {
+         margin-left: auto;
+         position:inherit;
+         z-index: 99;
+    }
+    .plusDirection
+     {  
+    position: absolute;
+    direction: rtl;
+    margin-top:-270px;
+    margin-left: 230px;
+    z-index: 99;
+    float: right;
+    }
+    .title h2 {
+    font-size: 50px;
+    font-weight: 900;
+    color: rgba(190, 185, 185,.2);
+}
+
+.title h3 {
+    font-weight: bolder;
+    font-size: 40px;
+    color: hsl(0,0%,100%);
+    line-height: 1;
+    text-decoration: none;
+    ;
+}
+   }
+
+     @media screen  and (min-width:576px) and (max-width:768px)
+  {
+   .caption{
+        font-size: 90px;
+    }
+    .plusDirection
+{  
+    position: absolute;
+    direction: rtl;
+    margin-top:-50px;
+    margin-left: 10px;
+    z-index: 99;
+    float: right;
+}
+
+    .descriptionCommon
+    {
+         margin-left: auto;
+         margin-right: auto;
+         margin-top: 0px;
+         width: 100%;
+    }
+    .personsDescription2 
+      {
+        margin-left: auto;
+        position:inherit;
+        z-index: 99;
+    }
+    .member
+    {
+        width: 100%;
+        overflow: hidden;
+    }
+        .title h2 {
+    font-size: 140px;
+    font-weight: 900;
+    color: rgba(190, 185, 185,.2);
+}
+
+.title h3 {
+    font-weight: bolder;
+    font-size: 80px;
+    color: hsl(0,0%,100%);
+    line-height: 1;
+    text-decoration: none;
+    ;
+}
+
+ }
+
+  @media screen  and (min-width:768px) and (max-width:1024px)
+  {
+     .personsDescription2 
+      {
+        margin-left: auto;
+        position:inherit;
+        z-index: 99;
+      }
+        .descriptionCommon
+    {
+         margin-left: auto;
+         margin-right: auto;
+         margin-top: 0px;
+         width: 100%;
+    }
+        .plusDirection
+    {  
+        position: absolute;
+        direction: rtl;
+        margin-top:-50px;
+        margin-left: 10px;
+        z-index: 99;
+        float: right;
+    }
+ }
